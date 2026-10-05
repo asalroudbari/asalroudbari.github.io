@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en" data-font="modern">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asal Roudbari | PhD student in Machine Learning, Georgia Tech</title>
+<meta name="description" content="Asal Roudbari is a PhD student in Machine Learning at Georgia Tech (ISyE, AI4OPT), working on temporal representation learning and survival analysis for healthcare, including personalized risk assessment in adolescent idiopathic scoliosis.">
+<meta name="author" content="Asal Roudbari">
+<link rel="canonical" href="https://asalroudbari.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Asal Roudbari">
+<meta property="og:description" content="PhD student in Machine Learning at Georgia Tech. Temporal representation learning and survival analysis for healthcare.">
+<meta property="og:url" content="https://asalroudbari.github.io/">
+<meta property="og:image" content="https://asalroudbari.github.io/images/profile.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310153A'/%3E%3Cpath d='M6 44c14 0 18-6 28-14s16-12 24-12' fill='none' stroke='%234FD0C6' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M6 44c14 0 20 2 30 4s14 2 22 2' fill='none' stroke='%23F27A98' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='43' r='3.5' fill='%23F3BE55'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Three type pairings are loaded so you can compare them with the "Typeface" control in the footer.
+     Once you pick one, delete the other families from this URL and remove the control. -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Figtree:ital,wght@0,400..700;1,400&family=Fraunces:opsz,wght@9..144,400..700&family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&display=swap" rel="stylesheet">
+
+<script>
+/* Apply saved theme and typeface before first paint */
+try{
+  var t=localStorage.getItem('theme'); if(t) document.documentElement.setAttribute('data-theme',t);
+  var f=localStorage.getItem('font');  if(f) document.documentElement.setAttribute('data-font',f);
+}catch(e){}
+</script>
+
+<style>
+/* =====================================================================
+   Tokens. The accent colours are the group colours used in the banner
+   drawing; three of them also mark the research threads.
+   ===================================================================== */
+:root{
+  --paper:#F2F4F9; --surface:#FFFFFF; --ink:#1A2140; --ink-2:#4A5273; --line:#D3D9E8; --wash:#E7EBF5;
+  --lapis:#2A4BA8; --turq:#12908C; --pom:#B4234C; --saffron:#D9930D;
+  --link:#2A4BA8;
+  --badge-bg:#F8E7BD; --badge-ink:#5F3F00;
+  --ok-bg:#D5F0EA; --ok-ink:#0B5B55;
+  --navy:#10153A;
+  --body:"Figtree","Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --display-weight:650; --display-tracking:-.022em; --display-leading:1.08;
+}
+:root[data-font="editorial"]{
+  --display:"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --display-weight:560; --display-tracking:-.018em; --display-leading:1.1;
+}
+:root[data-font="classic"]{
+  --display:"DM Serif Display","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --body:"DM Sans","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --display-weight:400; --display-tracking:-.005em; --display-leading:1.12;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#131836; --surface:#1B2147; --ink:#ECEEF8; --ink-2:#AAB1D0; --line:#2E3663; --wash:#1F2650;
+    --lapis:#8EA8F5; --turq:#4FD0C6; --pom:#F27A98; --saffron:#F3BE55;
+    --link:#A9BDFA; --badge-bg:#3C3216; --badge-ink:#F3BE55; --ok-bg:#123F3D; --ok-ink:#7FE0D6;
+    --navy:#0C1030;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131836; --surface:#1B2147; --ink:#ECEEF8; --ink-2:#AAB1D0; --line:#2E3663; --wash:#1F2650;
+  --lapis:#8EA8F5; --turq:#4FD0C6; --pom:#F27A98; --saffron:#F3BE55;
+  --link:#A9BDFA; --badge-bg:#3C3216; --badge-ink:#F3BE55; --ok-bg:#123F3D; --ok-ink:#7FE0D6;
+  --navy:#0C1030;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6}
+img{max-width:100%}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;text-decoration-color:color-mix(in srgb,var(--link) 40%,transparent)}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--pom);outline-offset:2px;border-radius:4px}
+button{font:inherit;color:inherit}
+h1,h2,h3,p{margin:0}
+.display{font-family:var(--display);font-weight:var(--display-weight);letter-spacing:var(--display-tracking);line-height:var(--display-leading)}
+.ico{width:1.1rem;height:1.1rem;flex:none;fill:currentColor}
+
+/* ---------- Shell: a centred page, identity card on the left ---------- */
+.shell{max-width:82rem;margin:0 auto;padding:1.5rem clamp(1rem,2.5vw,2rem) 0;display:grid;grid-template-columns:18rem minmax(0,1fr);gap:2.25rem;align-items:start}
+.side{position:sticky;top:1.5rem;max-height:calc(100vh - 3rem);overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:1.25rem 1.25rem 1.1rem;display:flex;flex-direction:column;gap:1rem}
+main{min-width:0;padding-bottom:2rem}
+.panel[hidden]{display:none}
+
+/* ---------- Identity ---------- */
+.ident{text-align:center}
+.portrait{width:9.25rem;aspect-ratio:4/5;margin:0 auto;border-radius:999px 999px 14px 14px;overflow:hidden;background:var(--wash);border:1px solid var(--line);box-shadow:.5rem .5rem 0 var(--turq);position:relative}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .mono{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font-size:2.8rem;color:var(--ink-2)}
+.portrait.empty img{display:none}
+.portrait.empty .mono{display:flex}
+.name{font-size:1.95rem;margin-top:1.2rem}
+.role{color:var(--ink-2);font-size:.93rem;line-height:1.4;margin-top:.35rem}
+
+/* ---------- Section switcher ---------- */
+.tabs{display:flex;flex-direction:column;gap:.2rem}
+.tabs a{display:flex;align-items:center;gap:.65rem;padding:.55rem .8rem;border-radius:12px;color:var(--ink);text-decoration:none;font-weight:500;font-size:1rem}
+.tabs a::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--line);flex:none}
+.tabs a:hover{background:var(--wash)}
+.tabs a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+.tabs a[aria-current="page"]::before{background:var(--saffron)}
+.tabs .short{display:none}
+
+/* ---------- Links out ---------- */
+.links{display:flex;flex-direction:column;gap:.05rem;border-top:1px solid var(--line);padding-top:1rem}
+.links a{display:flex;align-items:center;gap:.65rem;padding:.38rem .8rem;border-radius:10px;color:var(--ink);text-decoration:none;font-size:.95rem}
+.links a:hover{background:var(--wash)}
+.links a.cv{background:var(--pom);color:#fff;font-weight:600;justify-content:center;padding:.6rem .8rem;margin-bottom:.5rem;border-radius:12px}
+:root[data-theme="dark"] .links a.cv{color:#1A0A12}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .links a.cv{color:#1A0A12}}
+.links a.cv:hover{filter:brightness(1.08)}
+.links .addr{font-size:.86rem;word-break:break-all}
+
+/* ---------- Small switches ---------- */
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:999px;padding:2px;background:var(--surface)}
+.seg button{background:none;border:0;border-radius:999px;padding:.18rem .65rem;cursor:pointer;color:var(--ink-2);font-size:.8rem}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.switch{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);margin-bottom:1.5rem}
+.switch button{background:none;border:0;border-radius:999px;padding:.4rem 1.05rem;cursor:pointer;color:var(--ink-2);font-size:.95rem;font-weight:500;display:inline-flex;align-items:center;gap:.5rem}
+.switch button[data-dot]::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--dot)}
+.switch button[data-dot="scoliosis"]{--dot:var(--pom)}
+.switch button[data-dot="phenotyping"]{--dot:var(--turq)}
+.switch button[data-dot="earlier"]{--dot:var(--lapis)}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* ---------- Panel headings ---------- */
+.panel-head{margin-bottom:1.5rem}
+.panel-head h2{font-size:clamp(2rem,3.6vw,2.6rem)}
+.panel-head p{color:var(--ink-2);max-width:60ch;margin-top:.6rem}
+/* four visits and an event: the same marks as the banner drawing */
+.panel-head::before{content:"";display:block;height:11px;margin-bottom:1rem;
+  background:
+    radial-gradient(circle at 4px 50%,var(--ink-2) 0 2.4px,transparent 3.2px),
+    radial-gradient(circle at 21px 50%,var(--ink-2) 0 2.4px,transparent 3.2px),
+    radial-gradient(circle at 57px 50%,var(--ink-2) 0 2.4px,transparent 3.2px),
+    radial-gradient(circle at 70px 50%,var(--ink-2) 0 2.4px,transparent 3.2px),
+    radial-gradient(circle at 121px 50%,var(--pom) 0 4.2px,transparent 5px),
+    linear-gradient(var(--line),var(--line)) 0 50%/100% 1px no-repeat}
+.sub-head{font-size:1.25rem;margin:2.25rem 0 .9rem}
+
+/* =====================================================================
+   ABOUT
+   ===================================================================== */
+.about-top{container-type:inline-size}
+.banner{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);color:#ECEEF8;
+  background:radial-gradient(120% 140% at 18% 50%,#1B2260 0%,#10153A 55%,#0B0F2C 100%);
+  --thread:#6770A6;--lapis:#8EA8F5;--turq:#4FD0C6;--pom:#F27A98;--saffron:#F3BE55}
+.banner-art{width:100%;height:21rem;display:block}
+.banner-ui{position:absolute;left:1.25rem;bottom:1rem;max-width:40%;display:flex;flex-direction:column;gap:.55rem}
+.legend{display:flex;flex-wrap:wrap;gap:.2rem .9rem;font-size:.78rem;color:#C9CFEA;margin:0;padding:0;list-style:none}
+.legend li{display:flex;align-items:center;gap:.4rem}
+.legend li::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--c)}
+.banner-ui .ctl{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem}
+.banner .seg{background:rgba(16,21,58,.55);border-color:#3A4379}
+.banner .seg button{color:#C9CFEA;font-size:.8rem;padding:.2rem .7rem}
+.banner .seg button[aria-pressed="true"]{background:#ECEEF8;color:#10153A}
+.banner-ui .again{background:rgba(16,21,58,.55);border:1px solid #3A4379;border-radius:999px;padding:.2rem .75rem;color:#D5DAF0;cursor:pointer;font-size:.8rem}
+.banner-ui .again:hover{border-color:#8EA8F5}
+.art-cap{font-size:.8rem;color:var(--ink-2);margin:.6rem .25rem 0;max-width:none;line-height:1.5}
+.art-cap .sym{white-space:nowrap}
+@container (max-width:640px){
+  .banner-art{height:15rem}
+  .banner-ui{position:static;max-width:none;padding:0 1rem 1rem}
+}
+.tr{fill:none;stroke-linecap:round;mix-blend-mode:screen}
+.mark{mix-blend-mode:screen}
+.banner-art.animate .tr{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s linear forwards}
+.banner-art.animate .mark{opacity:0;animation:appear .5s ease-out forwards}
+.banner-art.animate .glow{opacity:0;animation:appear 1.6s ease-out 1.2s forwards}
+.banner-art.animate .band{opacity:0;animation:appear 1.6s ease-out 1.7s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes appear{to{opacity:1}}
+
+.about-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:2.25rem;margin-top:1.75rem;align-items:start}
+.bio p{max-width:62ch}
+.bio p+p{margin-top:.9rem}
+.facts{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:.3rem 1.2rem}
+.facts div{display:grid;grid-template-columns:4.75rem minmax(0,1fr);gap:.75rem;padding:.7rem 0;border-top:1px solid var(--line);font-size:.93rem}
+.facts div:first-child{border-top:0}
+.facts dt{color:var(--ink-2)}
+.facts dd{margin:0}
+
+/* News: a compact list that scrolls inside its own box */
+.news-head{font-size:1.25rem;margin:2.25rem 0 .9rem}
+.news-head .note{font-family:var(--body);font-weight:400;letter-spacing:0;font-size:.85rem;color:var(--ink-2);margin-left:.35rem}
+.news{max-height:17rem;overflow-y:auto;border-left:3px solid var(--line);padding:.1rem .9rem .1rem 1.1rem;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.news ul{list-style:none;margin:0;padding:0}
+.news li{margin:0 0 .7rem;max-width:80ch}
+.news li:last-child{margin-bottom:0}
+.news .date{font-weight:600;margin-right:.4rem;white-space:nowrap}
+.news b{font-weight:600}
+
+.affils{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.affil{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.affil:hover{border-color:var(--ink-2)}
+.affil .logo-box{height:6.5rem;display:flex;align-items:center;justify-content:center;padding:1rem 1.4rem;background:#fff}
+.affil .logo-box.navy{background:#0F1A4A}
+.affil .logo-box img{max-height:100%;max-width:100%;object-fit:contain}
+.affil .cap{display:block;padding:.75rem 1rem .9rem;border-top:1px solid var(--line)}
+.affil .cap strong{display:block;font-weight:600;line-height:1.3}
+.affil .cap span{display:block;color:var(--ink-2);font-size:.88rem}
+
+/* =====================================================================
+   RESEARCH AND PUBLICATIONS
+   ===================================================================== */
+.thread[hidden]{display:none}
+.project{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:2rem;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.4rem;border-top:5px solid var(--thread-colour)}
+.thread[data-thread="scoliosis"]{--thread-colour:var(--pom)}
+.thread[data-thread="phenotyping"]{--thread-colour:var(--turq)}
+.thread[data-thread="earlier"]{--thread-colour:var(--lapis)}
+.poster-btn{display:block;width:100%;padding:.4rem;border:1px solid #D3D9E8;border-radius:12px;background:#fff;cursor:zoom-in;line-height:0}
+.poster-btn img{width:100%;height:auto;display:block;border-radius:6px}
+.poster-btn:hover{border-color:var(--thread-colour)}
+.fig-hint{font-size:.82rem;color:var(--ink-2);margin-top:.6rem}
+.proj-meta{display:flex;align-items:center;gap:.5rem;font-size:.86rem;color:var(--ink-2)}
+.proj-meta::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--thread-colour);flex:none}
+.project h3{font-size:1.55rem;margin:.45rem 0 .9rem}
+.qa{margin:0}
+.qa div{display:grid;grid-template-columns:5.6rem minmax(0,1fr);gap:.75rem;padding:.6rem 0;border-top:1px solid var(--line);font-size:.94rem}
+.qa dt{color:var(--ink-2);font-size:.86rem;padding-top:.08rem}
+.qa dd{margin:0}
+.earlier-note{color:var(--ink-2);max-width:64ch}
+
+.pubs-head{font-size:1.25rem;margin:2rem 0 .9rem}
+.pubs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.75rem}
+.pub{display:grid;grid-template-columns:6.4rem minmax(0,1fr);gap:1.1rem;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:.95rem 1.1rem .95rem .95rem}
+.venue{align-self:start;border-radius:10px;padding:.5rem .55rem;text-align:center;background:color-mix(in srgb,var(--thread-colour) 13%,var(--surface));border-bottom:3px solid var(--thread-colour);line-height:1.2}
+.venue b{display:block;font-family:var(--display);font-weight:var(--display-weight);font-size:.98rem;letter-spacing:-.01em}
+.venue span{font-size:.8rem;color:var(--ink-2)}
+.pub-title{font-weight:600;line-height:1.4;max-width:64ch}
+.pub-authors{font-size:.9rem;margin-top:.25rem;color:var(--ink-2);max-width:72ch}
+.pub-authors b{color:var(--ink);font-weight:600}
+.pub-venue{font-size:.9rem;margin-top:.15rem;max-width:72ch}
+.pub-meta{display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center;margin-top:.5rem;font-size:.85rem}
+.badge{display:inline-block;background:var(--badge-bg);color:var(--badge-ink);border-radius:6px;padding:.05rem .5rem;font-weight:500}
+.badge.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.status{display:inline-block;border:1px dashed var(--ink-2);color:var(--ink-2);border-radius:6px;padding:.02rem .5rem}
+
+/* =====================================================================
+   EXPERIENCE
+   ===================================================================== */
+.exp-list[hidden]{display:none}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:2.1rem;top:1rem;bottom:1rem;width:1px;background:var(--line)}
+.tl>li{position:relative;display:grid;grid-template-columns:4.2rem minmax(0,1fr);gap:1.25rem;padding-bottom:1.5rem}
+.tl>li:last-child{padding-bottom:0}
+.logo{width:4.2rem;height:4.2rem;border-radius:14px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:.45rem;position:relative;overflow:hidden}
+.logo.navy{background:#0F1A4A}
+.logo.fill{padding:0}
+.logo.fill img{width:100%;height:100%;object-fit:cover}
+.logo img{max-width:100%;max-height:100%;object-fit:contain}
+.logo .mono{display:none;font-size:1.25rem}
+.logo.empty{background:var(--wash)}
+.logo.empty img{display:none}
+.logo.empty .mono{display:block;color:var(--ink-2)}
+.logo.medal{background:var(--badge-bg)}
+.logo.medal svg{width:2rem;height:2rem;stroke:var(--badge-ink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.award-note{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:1.25rem;align-items:center;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--pom);border-radius:16px;padding:.9rem 1.1rem .9rem .9rem;margin-bottom:1.6rem}
+.award-note p{max-width:60ch}
+.award-poster{display:block;padding:.25rem;border:1px solid #D3D9E8;border-radius:8px;background:#fff;cursor:zoom-in;line-height:0}
+.award-poster img{width:100%;height:auto;display:block;border-radius:4px}
+.award-poster:hover{border-color:var(--pom)}
+.tl-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.1rem 1.25rem;align-items:baseline}
+.tl h3{font-size:1.05rem;font-weight:600;line-height:1.35}
+.tl .when{color:var(--ink-2);font-size:.88rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tl .org{color:var(--ink-2);font-size:.93rem;margin-top:.1rem;max-width:72ch}
+.tl .desc{margin-top:.4rem;max-width:68ch;font-size:.96rem}
+
+footer{margin-top:3rem;padding-top:1.1rem;border-top:1px solid var(--line);color:var(--ink-2);font-size:.82rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.6rem 2rem}
+footer .prefs{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:center}
+footer .prefs .row{display:flex;align-items:center;gap:.5rem}
+
+/* ---------- Poster viewer ---------- */
+dialog{border:0;padding:0;background:transparent;width:min(96vw,1400px);max-height:96vh;color:#ECEEF8}
+dialog::backdrop{background:rgba(8,11,32,.88)}
+.viewer-bar{display:flex;justify-content:flex-end;margin-bottom:.6rem}
+dialog button{background:#fff;color:#1A2140;border:0;border-radius:999px;padding:.35rem 1rem;font-size:.9rem;cursor:pointer}
+dialog button:hover{background:#E7EBF5}
+.viewer-stage{background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:.5rem}
+.viewer-stage img{display:block;max-width:100%;max-height:80vh;width:auto;height:auto}
+.viewer-cap{margin-top:.7rem;font-size:.95rem}
+
+/* ---------- Medium and small screens ---------- */
+@media (max-width:1150px){
+  .project{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:900px){
+  .shell{display:flex;flex-direction:column;align-items:stretch;padding:0;gap:0}
+  .side{display:contents}
+  .ident{order:1}.links{order:2}.tabs{order:3}main{order:4}
+  .ident{display:grid;grid-template-columns:5.75rem minmax(0,1fr);gap:1.1rem;align-items:center;padding:1.25rem 1.25rem .9rem;background:var(--surface);text-align:left}
+  .portrait{width:5rem;margin:0;box-shadow:.3rem .3rem 0 var(--turq)}
+  .portrait .mono{font-size:1.6rem}
+  .name{margin-top:0;font-size:1.6rem}
+  .links{flex-direction:row;flex-wrap:wrap;gap:.4rem;border-top:0;padding:0 1.25rem 1rem;background:var(--surface)}
+  .links a{border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;font-size:.88rem}
+  .links a.cv{margin:0;border-color:transparent;padding:.3rem .9rem}
+  .links .addr{font-size:.88rem}
+  .tabs{flex-direction:row;position:sticky;top:0;z-index:10;overflow-x:auto;background:var(--surface);border-block:1px solid var(--line);padding:.5rem .9rem;gap:.2rem}
+  .tabs a{padding:.4rem .8rem;white-space:nowrap;font-size:.95rem}
+  .tabs a::before{display:none}
+  .tabs .long{display:none}
+  .tabs .short{display:inline}
+  main{padding:1.5rem 1.25rem 2rem}
+  .about-grid{grid-template-columns:minmax(0,1fr);gap:1.5rem}
+  .affils{grid-template-columns:minmax(0,1fr)}
+  .affil{display:grid;grid-template-columns:8.5rem minmax(0,1fr)}
+  .affil .logo-box{height:100%;min-height:5rem;padding:.8rem}
+  .affil .cap{border:0;align-self:center}
+}
+@media (max-width:560px){
+  .switch{border-radius:18px}
+  .pub{grid-template-columns:minmax(0,1fr);gap:.7rem}
+  .venue{justify-self:start;display:flex;gap:.5rem;align-items:baseline;padding:.3rem .7rem}
+  .qa div{grid-template-columns:minmax(0,1fr);gap:.1rem}
+  .award-note{grid-template-columns:minmax(0,1fr)}
+  .award-poster{max-width:14rem}
+  .tl::before{left:1.6rem}
+  .tl>li{grid-template-columns:3.2rem minmax(0,1fr);gap:.9rem}
+  .logo{width:3.2rem;height:3.2rem;border-radius:11px;padding:.35rem}
+  .logo.medal svg{width:1.5rem;height:1.5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .banner-art.animate .tr{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
+  .banner-art.animate .mark,.banner-art.animate .glow,.banner-art.animate .band{animation:none;opacity:1}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-scholar" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></symbol>
+  <symbol id="i-campus" viewBox="0 0 24 24"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></symbol>
+  <symbol id="i-medal" viewBox="0 0 24 24"><path d="M8 2l4 6 4-6"/><circle cx="12" cy="15" r="6.2"/><path d="M12 12.2v5.6M10.3 13.6l1.7-1.4"/></symbol>
+</svg>
+
+<div class="shell">
+
+  <!-- ================= IDENTITY CARD: who, sections, links ================= -->
+  <aside class="side">
+    <div class="ident">
+      <!-- Photo: images/profile.jpg (portrait crop, 4:5). -->
+      <div class="portrait" id="portrait">
+        <img src="images/profile.jpg" alt="Portrait of Asal Roudbari">
+        <span class="mono display" aria-hidden="true">AR</span>
+      </div>
+      <div>
+        <h1 class="name display">Asal Roudbari</h1>
+        <p class="role">PhD student, Machine Learning<br>Georgia Tech, Atlanta</p>
+      </div>
+    </div>
+
+    <nav class="tabs" id="tabs" aria-label="Sections">
+      <a href="#about" data-tab="about">About</a>
+      <a href="#research" data-tab="research"><span class="long">Research and publications</span><span class="short">Research</span></a>
+      <a href="#experience" data-tab="experience">Experience</a>
+    </nav>
+
+    <div class="links">
+      <a class="cv" href="files/Asal_Roudbari_CV.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-download"/></svg>Download CV</a>
+      <a href="https://www.linkedin.com/in/asalroudbari/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg>LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=HAtWV0gAAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg class="ico"><use href="#i-scholar"/></svg>Google Scholar</a>
+      <a href="https://github.com/asalroudbari" target="_blank" rel="noopener"><svg class="ico"><use href="#i-github"/></svg>GitHub</a>
+      <a href="https://www.isye.gatech.edu/users/asal-roudbari" target="_blank" rel="noopener"><svg class="ico"><use href="#i-campus"/></svg>Georgia Tech profile</a>
+      <a class="addr" href="mailto:aroudbari3@gatech.edu"><svg class="ico"><use href="#i-mail"/></svg>aroudbari3@gatech.edu</a>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <!-- ================= ABOUT ================= -->
+    <section class="panel" id="panel-about" data-title="About">
+      <div class="about-top">
+        <div class="banner">
+          <svg class="banner-art" id="art" role="img" aria-label="Illustration with synthetic data: patient records with irregular visits flow together, then separate into coloured groups; each group rides on a band that narrows as events occur."></svg>
+          <div class="banner-ui">
+            <ul class="legend" id="legend" aria-label="Groups"></ul>
+            <div class="ctl">
+              <span class="seg" id="cohortSeg" role="group" aria-label="Choose a cohort to draw">
+                <button data-cohort="abstract" aria-pressed="true">Abstract</button>
+                <button data-cohort="alz" aria-pressed="false">Alzheimer&rsquo;s</button>
+                <button data-cohort="scoliosis" aria-pressed="false">Scoliosis</button>
+              </span>
+              <button class="again" id="redraw">Draw again</button>
+            </div>
+          </div>
+        </div>
+        <p class="art-cap" id="artCap"></p>
+      </div>
+
+      <div class="about-grid">
+          <div class="bio">
+            <p>I am a PhD student in Machine Learning at Georgia Tech, working in the NSF AI Institute for Advances in Optimization (AI4OPT). My research is on temporal representation learning and survival analysis for healthcare: models that learn from records with irregular visits, missing measurements, and patients who leave before the outcome is observed, and still give each patient a useful, interpretable estimate.</p>
+            <p>Most of this work is done with orthopedic clinicians at Shriners Children&rsquo;s, where we study growth and curve progression in adolescents with idiopathic scoliosis. Alongside research I have led student organizations at Georgia Tech and Sharif, including a term as president of Georgia Tech&rsquo;s Iranian Student Association and a current seat on AI4OPT&rsquo;s student leadership.</p>
+          </div>
+          <dl class="facts">
+            <div><dt>Program</dt><dd>Ph.D. in Machine Learning, <a href="https://www.isye.gatech.edu/users/asal-roudbari" target="_blank" rel="noopener">Georgia Tech ISyE</a>, 2024 to present</dd></div>
+            <div><dt>Advisors</dt><dd><a href="https://scholar.google.com/citations?hl=en&amp;user=GxFQz-4AAAAJ" target="_blank" rel="noopener">Prof. Pascal Van Hentenryck</a> and <a href="https://scholar.google.com/citations?user=ywwD26MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Reza Zandehshahvar</a></dd></div>
+            <div><dt>Methods</dt><dd>Temporal representation learning, survival analysis, temporal phenotyping, irregular time series</dd></div>
+            <div><dt>Earlier</dt><dd>B.Sc. in Electrical Engineering, Sharif University of Technology</dd></div>
+          </dl>
+      </div>
+
+      <h3 class="news-head display">News <span class="note">(scroll)</span></h3>
+      <!-- NEWS: newest first. To add an item, copy one <li> line to the top and edit the date and text. -->
+      <div class="news" tabindex="0" role="region" aria-label="News, newest first">
+        <ul>
+          <li><span class="date">2026:</span>&#128196; Our paper &ldquo;Interpretable Phenotype Discovery Using Temporal Risk-Aware Clustering&rdquo; (TRACE) was accepted at the <b>Interpretability4Discovery Workshop @ NeurIPS 2026</b>.</li>
+          <li><span class="date">Jan 2026:</span>&#127942; <b>Second place poster award</b> at the <b>State of Science Meeting, Shriners Children&rsquo;s</b>.</li>
+          <li><span class="date">Oct 2025:</span>&#127942; <b>First place poster award</b> at the <b>NSF AIVO Summit for AI Institutes Leadership</b>.</li>
+          <li><span class="date">Oct 2025:</span>&#127793; Became <b>president of the Iranian Student Association</b> at Georgia Tech.</li>
+          <li><span class="date">Sep 2025:</span>&#127942; Our collagen X biomarker study received the <b>John H. Moe Award</b> for Best Basic Science/Translational Research Poster at the <b>Scoliosis Research Society (SRS) Annual Meeting</b>.</li>
+          <li><span class="date">Sep 2025:</span>&#127908; Our <b>POSNA Annual Meeting</b> talk was nominated for <b>Best Translational Research Oral Presentation</b>.</li>
+          <li><span class="date">Mar 2025:</span>&#129309; Joined the <b>AI4OPT student leadership</b>.</li>
+          <li><span class="date">Jan 2025:</span>&#128196; Our paper on network indices for traffic flow imputation was published in <b>IEEE Transactions on Intelligent Transportation Systems</b>.</li>
+          <li><span class="date">2024:</span>&#127891; Started my <b>PhD at Georgia Tech</b> and joined <b>AI4OPT</b>.</li>
+        </ul>
+      </div>
+
+      <h3 class="sub-head display">Where I work</h3>
+      <div class="affils">
+        <a class="affil" href="https://www.isye.gatech.edu/" target="_blank" rel="noopener">
+          <span class="logo-box"><img src="images/logos/gatech.png" alt="Georgia Tech"></span>
+          <span class="cap"><strong>Georgia Tech ISyE</strong><span>PhD program in Machine Learning</span></span>
+        </a>
+        <a class="affil" href="https://www.ai4opt.org/" target="_blank" rel="noopener">
+          <span class="logo-box navy"><img src="images/logos/ai4opt.png" alt="AI Institute for Advances in Optimization"></span>
+          <span class="cap"><strong>AI4OPT</strong><span>NSF AI institute, my research home</span></span>
+        </a>
+        <a class="affil" href="https://www.shrinerschildrens.org/" target="_blank" rel="noopener">
+          <span class="logo-box"><img src="images/logos/shriners.png" alt="Shriners Children&rsquo;s"></span>
+          <span class="cap"><strong>Shriners Children&rsquo;s</strong><span>Clinical research partner</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= RESEARCH AND PUBLICATIONS ================= -->
+    <section class="panel" id="panel-research" data-title="Research and publications">
+      <div class="panel-head">
+        <h2 class="display">Research and publications</h2>
+      </div>
+
+      <div class="switch" role="group" aria-label="Choose a research thread">
+        <button data-thread-set="scoliosis" data-dot="scoliosis" aria-pressed="true">Scoliosis and growth</button>
+        <button data-thread-set="phenotyping" data-dot="phenotyping" aria-pressed="false">Temporal phenotyping</button>
+        <button data-thread-set="earlier" data-dot="earlier" aria-pressed="false">Earlier work</button>
+      </div>
+
+      <!-- To add a paper, copy one <li class="pub"> inside the right thread. Author names are written in full. -->
+
+      <!-- ---------- Thread: scoliosis ---------- -->
+      <div class="thread" data-thread="scoliosis">
+        <article class="project">
+          <div>
+            <button class="poster-btn" data-cap="Poster: Machine Learning for Personalized Risk Assessment in Idiopathic Scoliosis.">
+              <img id="posterScoliosis" src="images/poster-scoliosis.webp" width="1700" height="1133" alt="Research poster: Machine Learning for Personalized Risk Assessment in Idiopathic Scoliosis">
+            </button>
+            <p class="fig-hint">Select the poster to view it full size.</p>
+          </div>
+          <div>
+            <p class="proj-meta">With Shriners Children&rsquo;s, 2024 to present</p>
+            <h3 class="display">Personalized risk assessment in idiopathic scoliosis</h3>
+            <dl class="qa">
+              <div><dt>Question</dt><dd>How much growth does this child have left? Bracing decisions depend on it, but today&rsquo;s maturity scores are population-based and retrospective.</dd></div>
+              <div><dt>Approach</dt><dd>A survival model that reads each patient&rsquo;s irregular clinic history, static features, and the collagen X (CXM) blood biomarker, and predicts time to growth cessation from any landmark age.</dd></div>
+              <div><dt>Recognition</dt><dd>John H. Moe Award at SRS (Sep 2025), first place at the NSF AIVO Summit (Oct 2025), second place at the Shriners State of Science Meeting (Jan 2026).</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <h3 class="pubs-head display">Publications</h3>
+        <ul class="pubs">
+          <li class="pub">
+            <div class="venue"><b>CORR</b><span>in review</span></div>
+            <div>
+              <p class="pub-title">Personalized Prediction of Growth Cessation in Adolescents with Idiopathic Scoliosis Using Longitudinal Clinical Data and a Type X Collagen Biomarker: A Prospective Cohort Study</p>
+              <!-- TODO: confirm author order -->
+              <p class="pub-authors"><b>Asal Roudbari</b>, Michelle C. Welborn, Susan Sienko, BLISS Study Group, Reza Zandehshahvar, Pascal Van Hentenryck</p>
+              <p class="pub-venue"><i>Clinical Orthopaedics and Related Research (CORR)</i>, journal article</p>
+              <div class="pub-meta"><span class="status">Under review</span></div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="venue"><b>IMAST</b><span>in review</span></div>
+            <div>
+              <p class="pub-title">Growth markers and the timing and magnitude of curve change in idiopathic scoliosis</p>
+              <p class="pub-authors"><b>Asal Roudbari</b>, Reza Zandehshahvar, Pascal Van Hentenryck, Michelle C. Welborn, Susan Sienko</p>
+              <p class="pub-venue"><i>34th International Meeting on Advanced Spine Techniques (IMAST)</i>, 2027</p>
+              <div class="pub-meta"><span class="status">Under review</span></div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="venue"><b>SRS</b><span>2025</span></div>
+            <div>
+              <p class="pub-title">Collagen X Biomarker (CXM) is Predictive of Growth Cessation in Idiopathic Scoliosis</p>
+              <p class="pub-authors">Michelle C. Welborn, <b>Asal Roudbari</b>, Reza Zandehshahvar, Pascal Van Hentenryck, Amer F. Samdani, Robert H. Cho, Joseph D. Stone, Selina C. Poon, Vishwas R. Talwalkar, Michal Szczodry, Purnendu Gupta, James O. Sanders, Susan Sienko</p>
+              <p class="pub-venue"><i>Scoliosis Research Society (SRS) Annual Meeting</i>, 2025</p>
+              <div class="pub-meta"><span class="badge">John H. Moe Award, Best Basic Science/Translational Research Poster</span><a href="https://www.srs.org/SRS-News/Scoliosis-Research-Society-Announces-the-Winners-of-the-Russell-A.-Hibbs-John-H.-Moe--Louis-A1.-Goldstein-Awards" target="_blank" rel="noopener">SRS announcement</a></div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="venue"><b>POSNA</b><span>2025</span></div>
+            <div>
+              <p class="pub-title">Biomarker Longitudinal Idiopathic Scoliosis Study: The Impact of Growth on Curve Progression in Braced Patients with Idiopathic Scoliosis Who Experience Curve Progression vs. Curve Regression</p>
+              <p class="pub-authors">Michelle C. Welborn, <b>Asal Roudbari</b>, Reza Zandehshahvar, James O. Sanders, Pascal Van Hentenryck, Amer F. Samdani, Joseph D. Stone, Robert H. Cho, Selina C. Poon, Vishwas R. Talwalkar, Michal Szczodry, Purnendu Gupta, Susan Sienko</p>
+              <p class="pub-venue"><i>Pediatric Orthopaedic Society of North America (POSNA) Annual Meeting</i>, 2025</p>
+              <div class="pub-meta"><span class="badge">Nominated, Best Translational Research Oral Presentation</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ---------- Thread: temporal phenotyping ---------- -->
+      <div class="thread" data-thread="phenotyping">
+        <article class="project">
+          <div>
+            <button class="poster-btn" data-cap="Poster: Interpretable Phenotype Discovery Using Temporal Risk-Aware Clustering.">
+              <img src="images/poster-trace.webp" width="1700" height="1133" alt="Research poster: Interpretable Phenotype Discovery Using Temporal Risk-Aware Clustering">
+            </button>
+            <p class="fig-hint">Select the poster to view it full size.</p>
+          </div>
+          <div>
+            <p class="proj-meta">NeurIPS 2026 workshop paper</p>
+            <h3 class="display">TRACE: temporal risk-aware clustering</h3>
+            <dl class="qa">
+              <div><dt>Question</dt><dd>Patients reach the same diagnosis at different speeds and by different routes. Can we find patient groups that stay predictive without flattening those differences?</dd></div>
+              <div><dt>Approach</dt><dd>TRACE learns a time-aware representation of each visit history, maps it to a soft phenotype that updates as new visits arrive, and predicts the future diagnosis only through that phenotype.</dd></div>
+              <div><dt>Result</dt><dd>On ADNI (1,788 participants, 10,941 visits), the best phenotype separation at 24 months of the five methods compared: SI 42.0% against 36.2% for the next best.</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <h3 class="pubs-head display">Publications</h3>
+        <ul class="pubs">
+          <li class="pub">
+            <div class="venue"><b>NeurIPS</b><span>workshop, 2026</span></div>
+            <div>
+              <p class="pub-title">Interpretable Phenotype Discovery Using Temporal Risk-Aware Clustering</p>
+              <p class="pub-authors"><b>Asal Roudbari</b>, Pascal Van Hentenryck, Reza Zandehshahvar</p>
+              <p class="pub-venue"><i>Interpretability4Discovery Workshop at NeurIPS</i>, 2026</p>
+              <div class="pub-meta"><span class="badge ok">Accepted</span><!-- <a href="ARXIV_URL" target="_blank" rel="noopener">Paper</a><a href="CODE_URL" target="_blank" rel="noopener">Code</a> --></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ---------- Thread: earlier work ---------- -->
+      <div class="thread" data-thread="earlier">
+        <p class="earlier-note">Before my PhD I worked on transportation networks, robotics, and power systems at Sharif University of Technology, the University of Tehran, and Cross Labs.</p>
+        <h3 class="pubs-head display">Publications</h3>
+        <ul class="pubs">
+          <li class="pub">
+            <div class="venue"><b>IEEE T-ITS</b><span>2025</span></div>
+            <div>
+              <p class="pub-title">The Impact of Network Indices Integration on Traffic Flow Imputation Accuracy: A Machine Learning Approach</p>
+              <!-- Author order as indexed for the published article. If first authorship is shared, add a note here. -->
+              <p class="pub-authors">Sina Sabzekar, <b>Asal Roudbari</b>, Arash Dehghani, Artin Safaeiestalkhzir, Zahra Amini</p>
+              <p class="pub-venue"><i>IEEE Transactions on Intelligent Transportation Systems</i>, vol. 26, no. 4, pp. 5411&ndash;5421, 2025</p>
+              <div class="pub-meta"><a href="https://ieeexplore.ieee.org/document/10845033" target="_blank" rel="noopener">Paper</a></div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="venue"><b>Springer</b><span>chapter, 2024</span></div>
+            <div>
+              <p class="pub-title">Genetic Algorithm Applications to Power Management</p>
+              <p class="pub-authors"><b>Asal Roudbari</b>, Mahdi Khosravy, Olaf Witkowski</p>
+              <p class="pub-venue">In <i>Frontiers in Genetic Algorithm Theory and Applications</i>, Springer Nature, Singapore, 2024</p>
+              <div class="pub-meta"><a href="https://link.springer.com/chapter/10.1007/978-981-99-8107-6_9" target="_blank" rel="noopener">Chapter</a></div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="venue"><b>ICRoM</b><span>2023</span></div>
+            <div>
+              <p class="pub-title">Autonomous Vision-Based Robotic Grasping of Household Objects: A Practical Case Study</p>
+              <p class="pub-authors"><b>Asal Roudbari</b>, Mahdi Dalvand, Navid Pasiar, Navid Asadi, Mohammad Yousefi, Mehdi Tale Masouleh</p>
+              <p class="pub-venue"><i>11th RSI International Conference on Robotics and Mechatronics (ICRoM)</i>, IEEE, 2023</p>
+              <div class="pub-meta"><a href="https://ieeexplore.ieee.org/document/10412434" target="_blank" rel="noopener">Paper</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="panel" id="panel-experience" data-title="Experience">
+      <div class="panel-head">
+        <h2 class="display">Experience</h2>
+      </div>
+
+      <div class="switch" role="group" aria-label="Choose what to show">
+        <button data-exp="research" aria-pressed="true">Research</button>
+        <button data-exp="awards" aria-pressed="false">Honors and awards</button>
+        <button data-exp="education" aria-pressed="false">Education</button>
+        <button data-exp="leadership" aria-pressed="false">Leadership and service</button>
+      </div>
+
+      <!-- Logos live in images/logos/. If a logo file is missing, the initials show instead. -->
+      <div class="exp-list" data-exp-list="research">
+        <ul class="tl">
+          <li>
+            <div class="logo navy"><img src="images/logos/ai4opt-mark.png" alt=""><span class="mono display" aria-hidden="true">AI</span></div>
+            <div>
+              <div class="tl-head"><h3>AI for scoliosis</h3><span class="when">Sep 2024 to present</span></div>
+              <p class="org">AI4OPT, Georgia Tech, with Shriners Children&rsquo;s. Supervisors: <a href="https://scholar.google.com/citations?user=ywwD26MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Reza Zandehshahvar</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=GxFQz-4AAAAJ" target="_blank" rel="noopener">Prof. Pascal Van Hentenryck</a></p>
+              <p class="desc">Developed a personalized machine learning pipeline that predicts growth cessation in adolescent idiopathic scoliosis from irregular longitudinal patient data, working with orthopedic clinicians so that model outputs line up with real bracing decisions.</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/sharif.png" alt=""><span class="mono display" aria-hidden="true">S</span></div>
+            <div>
+              <div class="tl-head"><h3>Line graph neural network for spatial traffic flow imputation</h3><span class="when">Jul to Dec 2023</span></div>
+              <p class="org">Sharif University of Technology. Supervisor: <a href="https://scholar.google.com/citations?user=1-mONdwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Zahra Amini</a></p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/tehran.png" alt=""><span class="mono display" aria-hidden="true">UT</span></div>
+            <div>
+              <div class="tl-head"><h3>Object grasping with a two-finger gripper and a Delta robot</h3><span class="when">Apr to Sep 2023</span></div>
+              <p class="org">Bachelor&rsquo;s project, Human and Robot Interaction Lab, University of Tehran. Supervisor: <a href="https://scholar.google.com/citations?user=gkiFy20AAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Mehdi Tale Masouleh</a></p>
+            </div>
+          </li>
+          <li>
+            <div class="logo fill"><img src="images/logos/crosslabs.png" alt=""><span class="mono display" aria-hidden="true">CL</span></div>
+            <div>
+              <div class="tl-head"><h3>Applications of genetic algorithms in power management</h3><span class="when">Feb to Apr 2023</span></div>
+              <p class="org">Cross Labs, Japan (remote). Supervisor: <a href="https://scholar.google.com/citations?user=9lU8fcMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Mahdi Khosravy</a></p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/aalto.png" alt=""><span class="mono display" aria-hidden="true">A</span></div>
+            <div>
+              <div class="tl-head"><h3>Object localization at sea: estimation methods in wide ranges</h3><span class="when">Jul to Oct 2022</span></div>
+              <p class="org">Summer research internship on ECAMARIS, a project with ABB. Marine Technology group (Risk and Intelligence in Marine Systems), Aalto University. Supervisors: <a href="https://research.aalto.fi/en/persons/osiris-valdez-banda" target="_blank" rel="noopener">Prof. Osiris Valdez Banda</a> and <a href="https://scholar.google.com/citations?user=jLWiifwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Dr. Meriam Chaal</a>; worked with postdoctoral researcher <a href="https://scholar.google.com/citations?user=DqdE1mIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ahmad BahooToroody</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="exp-list" data-exp-list="leadership">
+        <ul class="tl">
+          <li>
+            <div class="logo navy"><img src="images/logos/ai4opt-mark.png" alt=""><span class="mono display" aria-hidden="true">AI</span></div>
+            <div>
+              <div class="tl-head"><h3>Student Leadership Member, AI4OPT</h3><span class="when">Mar 2025 to present</span></div>
+              <p class="org">Georgia Institute of Technology</p>
+              <p class="desc">Represent PhD students in seminars, mentorship initiatives, and research culture discussions; organize social events for the institute; took part in Seth Bonder Camp.</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/gatech.png" alt=""><span class="mono display" aria-hidden="true">GT</span></div>
+            <div>
+              <div class="tl-head"><h3>President, Iranian Student Association</h3><span class="when">Jan 2025 to Mar 2026</span></div>
+              <p class="org">Georgia Institute of Technology. Communications Director from Jan 2025, President from Oct 2025</p>
+              <p class="desc">Directed the association&rsquo;s email, social media, and event communication, and coordinated cultural and academic programming for the Iranian student community.</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/sharif.png" alt=""><span class="mono display" aria-hidden="true">S</span></div>
+            <div>
+              <div class="tl-head"><h3>Communications Director, Resana (EE Student Council)</h3><span class="when">May 2021 to Sep 2022</span></div>
+              <p class="org">Sharif University of Technology</p>
+              <p class="desc">Led communication and outreach for the Electrical Engineering student council; organized seminars, competitions, workshops, charity initiatives, and student well-being activities.</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/sharif.png" alt=""><span class="mono display" aria-hidden="true">S</span></div>
+            <div>
+              <div class="tl-head"><h3>Competition Organizer and Communications Director, &ldquo;Spark&rdquo;</h3><span class="when">Spring 2022</span></div>
+              <p class="org">Sharif University of Technology with I.D.E.A. Association, Germany</p>
+              <p class="desc">Co-organized an international student competition, handling participant communication and technical support.</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/sharif.png" alt=""><span class="mono display" aria-hidden="true">S</span></div>
+            <div>
+              <div class="tl-head"><h3>Event Host and Organizer: Emeet1, Emeet2, ReACT</h3><span class="when">2021 to 2022</span></div>
+              <p class="org">Sharif University of Technology</p>
+              <p class="desc">Hosted university-wide cultural events with more than 300 participants and managed logistics, promotion, and on-site coordination.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="exp-list" data-exp-list="education">
+        <ul class="tl">
+          <li>
+            <div class="logo"><img src="images/logos/gatech.png" alt=""><span class="mono display" aria-hidden="true">GT</span></div>
+            <div>
+              <div class="tl-head"><h3>Ph.D. in Machine Learning</h3><span class="when">2024 to present</span></div>
+              <p class="org">Georgia Institute of Technology, School of Industrial and Systems Engineering, Atlanta, GA</p>
+              <p class="desc">Focus: temporal representation learning and survival analysis, with applications in healthcare.</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/sharif.png" alt=""><span class="mono display" aria-hidden="true">S</span></div>
+            <div>
+              <div class="tl-head"><h3>B.Sc. in Electrical Engineering, Control and Dynamical Systems</h3><span class="when">2020 to 2024</span></div>
+              <p class="org">Sharif University of Technology, Tehran, Iran</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo"><img src="images/logos/nodet.png" alt=""><span class="mono display" aria-hidden="true">N</span></div>
+            <div>
+              <div class="tl-head"><h3>Diploma in Mathematics and Physics</h3><span class="when">2014 to 2020</span></div>
+              <p class="org">National Organization for Development of Exceptional Talents (NODET), Sari, Iran</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="exp-list" data-exp-list="awards">
+        <div class="award-note">
+          <button class="award-poster" data-open="#posterScoliosis" data-cap="Poster: Machine Learning for Personalized Risk Assessment in Idiopathic Scoliosis." aria-label="Enlarge the poster: Machine Learning for Personalized Risk Assessment in Idiopathic Scoliosis">
+            <img src="images/poster-scoliosis-thumb.webp" width="520" height="347" alt="">
+          </button>
+          <p>All four are for one piece of work, the poster <strong>&ldquo;Machine Learning for Personalized Risk Assessment in Idiopathic Scoliosis,&rdquo;</strong> with Shriners Children&rsquo;s. Select the poster to view it full size, or <a href="#research">read about the research</a>.</p>
+        </div>
+        <ul class="tl">
+          <li>
+            <div class="logo medal"><svg aria-hidden="true"><use href="#i-medal"/></svg></div>
+            <div>
+              <div class="tl-head"><h3>Poster Award, 2nd place</h3><span class="when">Jan 2026</span></div>
+              <p class="org">State of Science Meeting, Shriners Children&rsquo;s</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo medal"><svg aria-hidden="true"><use href="#i-medal"/></svg></div>
+            <div>
+              <div class="tl-head"><h3>Poster Award, 1st place</h3><span class="when">Oct 2025</span></div>
+              <p class="org">NSF AIVO Summit for AI Institutes Leadership</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo medal"><svg aria-hidden="true"><use href="#i-medal"/></svg></div>
+            <div>
+              <div class="tl-head"><h3>John H. Moe Award, Best Basic Science/Translational Research Poster</h3><span class="when">Sep 2025</span></div>
+              <p class="org">Scoliosis Research Society (SRS) Annual Meeting</p>
+            </div>
+          </li>
+          <li>
+            <div class="logo medal"><svg aria-hidden="true"><use href="#i-medal"/></svg></div>
+            <div>
+              <div class="tl-head"><h3>Nominated, Best Translational Research Oral Presentation</h3><span class="when">Sep 2025</span></div>
+              <p class="org">Pediatric Orthopaedic Society of North America (POSNA) Annual Meeting</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <span>&copy; <span id="yr">2026</span> Asal Roudbari. Last updated October 2026.</span>
+      <div class="prefs">
+        <div class="row"><span>Theme</span>
+          <span class="seg" id="themeSeg"><button data-theme-set="light">Light</button><button data-theme-set="dark">Dark</button></span></div>
+        <!-- PREVIEW ONLY: typeface comparison. Remove this row once a pairing is chosen. -->
+        <div class="row"><span>Typeface</span>
+          <span class="seg" id="fontSeg"><button data-font-set="modern">Modern</button><button data-font-set="editorial">Editorial</button><button data-font-set="classic">Classic</button></span></div>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<dialog id="viewer" aria-label="Poster viewer">
+  <div class="viewer-bar"><button id="vClose">Close</button></div>
+  <div class="viewer-stage"><img id="vImg" alt=""></div>
+  <p class="viewer-cap" id="vCap"></p>
+</dialog>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function each(sel,fn,ctx){[].forEach.call((ctx||document).querySelectorAll(sel),fn)}
+
+  /* ---------- Image fallbacks: portrait and logo tiles ---------- */
+  each('.portrait, .logo',function(box){
+    var img=box.querySelector('img'); if(!img) return;
+    function miss(){box.classList.add('empty')}
+    img.addEventListener('error',miss);
+    if(img.complete && img.naturalWidth===0) miss();
+  });
+
+  /* ---------- Theme ---------- */
+  function isDark(){
+    var t=root.getAttribute('data-theme');
+    return t ? t==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function markTheme(){each('[data-theme-set]',function(b){b.setAttribute('aria-pressed',(b.getAttribute('data-theme-set')==='dark')===isDark())})}
+  each('[data-theme-set]',function(b){b.addEventListener('click',function(){
+    var v=b.getAttribute('data-theme-set'); root.setAttribute('data-theme',v);
+    try{localStorage.setItem('theme',v)}catch(e){} markTheme();
+  })});
+  markTheme();
+
+  /* ---------- Typeface comparison (preview only) ---------- */
+  function markFont(){var cur=root.getAttribute('data-font')||'modern';each('[data-font-set]',function(b){b.setAttribute('aria-pressed',b.getAttribute('data-font-set')===cur)})}
+  each('[data-font-set]',function(b){b.addEventListener('click',function(){
+    var v=b.getAttribute('data-font-set'); root.setAttribute('data-font',v);
+    try{localStorage.setItem('font',v)}catch(e){} markFont();
+  })});
+  markFont();
+
+  /* ---------- Small switches: research thread, experience list ---------- */
+  function wireSwitch(btnAttr,listAttr,first){
+    var btns=[].slice.call(document.querySelectorAll('['+btnAttr+']'));
+    function set(k){
+      btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute(btnAttr)===k)});
+      each('['+listAttr+']',function(l){l.hidden=l.getAttribute(listAttr)!==k});
+    }
+    btns.forEach(function(b){b.addEventListener('click',function(){set(b.getAttribute(btnAttr))})});
+    set(first); return set;
+  }
+  wireSwitch('data-thread-set','data-thread','scoliosis');
+  wireSwitch('data-exp','data-exp-list','research');
+
+  /* ---------- Sections: one panel at a time, driven by the URL hash ---------- */
+  var TABS=['about','research','experience'];
+  var tabLinks=[].slice.call(document.querySelectorAll('#tabs a'));
+  var mainEl=document.getElementById('main'), tabsEl=document.getElementById('tabs');
+  var current=null;
+  function fromHash(){
+    var h=location.hash.replace('#','');
+    if(h==='publications') h='research';
+    return TABS.indexOf(h)>-1?h:'about';
+  }
+  function show(tab,scroll){
+    if(tab===current) return;
+    current=tab;
+    TABS.forEach(function(t){document.getElementById('panel-'+t).hidden=(t!==tab)});
+    tabLinks.forEach(function(a){
+      if(a.getAttribute('data-tab')===tab) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    document.title=(tab==='about'?'':document.getElementById('panel-'+tab).getAttribute('data-title')+' | ')+'Asal Roudbari | PhD student in Machine Learning, Georgia Tech';
+    if(scroll){
+      var stacked=getComputedStyle(tabsEl).position==='sticky';
+      var y=stacked ? mainEl.getBoundingClientRect().top+window.pageYOffset-tabsEl.offsetHeight : 0;
+      if(window.pageYOffset>y) window.scrollTo(0,y);
+    }
+    if(tab==='about' && ready) draw(!drawnOnce);
+  }
+  window.addEventListener('hashchange',function(){show(fromHash(),true)});
+
+  /* ---------- Poster viewer ---------- */
+  var viewer=document.getElementById('viewer'), vImg=document.getElementById('vImg'), vCap=document.getElementById('vCap');
+  each('.poster-btn, .award-poster',function(b){
+    if(!b.hasAttribute('aria-label')) b.setAttribute('aria-label','Enlarge: '+(b.getAttribute('data-cap')||'poster'));
+    b.addEventListener('click',function(){
+      /* data-open points at the full-size image to show; otherwise use the button's own image */
+      var img=b.hasAttribute('data-open') ? document.querySelector(b.getAttribute('data-open')) : b.querySelector('img');
+      vImg.src=img.currentSrc||img.src; vImg.alt=img.alt; vCap.textContent=b.getAttribute('data-cap')||'';
+      if(viewer.showModal) viewer.showModal(); else window.open(vImg.src,'_blank');
+    });
+  });
+  document.getElementById('vClose').addEventListener('click',function(){viewer.close()});
+  viewer.addEventListener('click',function(e){if(e.target===viewer) viewer.close()});
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* =====================================================================
+     Banner drawing (synthetic data, regenerated on every load).
+       - each line is one patient record; dots are visits at irregular times
+       - records flow together, then separate into colour-coded groups
+         (the clustering)
+       - a record ends with a filled dot (event) or a ring (censored)
+       - each group rides on a band whose height follows that group's
+         Kaplan-Meier survival estimate, stepping down at every event
+     COHORTS defines the options in the banner's cohort control. To add
+     one, copy an entry and add a matching button in the HTML.
+       origin : where records start (0 = top of the banner, 1 = bottom)
+       target : where each group ends up
+       hazard : how quickly events happen in that group
+     ===================================================================== */
+  var COHORTS={
+    abstract:{origin:0.50, legendLabel:'Four phenotypes', note:'An abstract cohort that separates into four phenotypes.',
+      groups:[{colour:'--lapis',w:.27,target:.10,hazard:.25},
+              {colour:'--turq',w:.29,target:.37,hazard:.7},
+              {colour:'--pom',w:.26,target:.64,hazard:1.3},
+              {colour:'--saffron',w:.18,target:.90,hazard:2.2}]},
+    alz:{origin:0.12, note:'Styled after Alzheimer\u2019s progression: a cognitive score that holds for some people and declines for others.',
+      groups:[{name:'Normal cognition',colour:'--lapis',w:.38,target:.12,hazard:.12},
+              {name:'Mild impairment',colour:'--turq',w:.36,target:.50,hazard:.8},
+              {name:'Alzheimer\u2019s',colour:'--pom',w:.26,target:.88,hazard:2.2}]},
+    scoliosis:{origin:0.5, note:'Styled after scoliosis under bracing: curves that progress, hold, or regress.',
+      groups:[{name:'Progression',colour:'--pom',w:.28,target:.12,hazard:2.0},
+              {name:'Stable',colour:'--saffron',w:.42,target:.5,hazard:.6},
+              {name:'Regression',colour:'--turq',w:.30,target:.88,hazard:.12}]}
+  };
+  var svg=document.getElementById('art'), capEl=document.getElementById('artCap'), legendEl=document.getElementById('legend');
+  var seed=(Math.random()*1e9)|0, drawnOnce=false, ready=false, cohortKey='abstract';
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS='http://www.w3.org/2000/svg';
+  function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+  function el(name,attrs){var e=document.createElementNS(NS,name);for(var k in attrs)e.setAttribute(k,attrs[k]);return e}
+  function f1(v){return v.toFixed(1)}
+  function smooth(t){t=t<0?0:t>1?1:t;return t*t*(3-2*t)}
+
+  function drawArt(svg,cohortKey,seed,animate){
+    var box=svg.getBoundingClientRect(); if(box.width<10) return false;
+    var C=COHORTS[cohortKey], G=C.groups, w=box.width, h=box.height, wide=w>=640;
+    svg.setAttribute('viewBox','0 0 '+f1(w)+' '+f1(h));
+    svg.classList.toggle('animate',!!animate);
+    while(svg.firstChild) svg.removeChild(svg.firstChild);
+    var R=rng(seed);
+    function gauss(){return (R()+R()+R()+R()-2)*0.87}
+    function Y(f){return h*(0.11+0.78*f)}
+    var n=wide?Math.round(Math.min(120,70+w/22)):48;
+    var DUR=2.6, T0=0.30;                 /* streams separate around T0; events happen after it */
+    var phase=R()*6.283, gph=G.map(function(){return R()*6.283});
+    var sBar=0.22, bBar=0.40;
+    var gapF=1; for(var q=1;q<G.length;q++) gapF=Math.min(gapF,G[q].target-G[q-1].target);
+    var band=Math.min(h*0.105, h*0.78*gapF*0.40);      /* half-height of a full band */
+    var trunkSpread=h*0.026, streamSpread=band*0.52;
+
+    function wave(u,t){return Math.sin(u*5.2+phase)*h*0.034*(1-0.75*t)}
+    function centre(k,u){
+      var t=smooth((u-sBar)/bBar);
+      return Y(C.origin+(G[k].target-C.origin)*t)+wave(u,t)+Math.sin(u*4.2+gph[k])*h*0.016*t;
+    }
+
+    /* ---- simulate follow-up ---- */
+    var recs=[], byGroup=G.map(function(){return []});
+    for(var i=0;i<n;i++){
+      var r=R(), k=0, acc=0; for(;k<G.length-1;k++){acc+=G[k].w; if(r<acc) break}
+      var tEvent=T0+(1-T0)*Math.sqrt(-Math.log(1-R())/G[k].hazard);
+      var tDrop=R()<0.10 ? 0.38+R()*0.55 : 9;
+      var tEnd=Math.min(tEvent,tDrop,1.03), isEvent=(tEvent<=tDrop && tEvent<1);
+      var rec={k:k,t:tEnd,e:isEvent,done:tEnd>=1,d:gauss(),s:sBar+(R()-.5)*0.16,b:bBar+(R()-.5)*0.14,a:1+R()*2.6,fq:1.5+R()*2.5,p:R()*6.283,delay:R()*0.6,sw:0.7+R()*0.8,op:0.42+R()*0.45};
+      recs.push(rec); byGroup[k].push(rec);
+    }
+    /* Kaplan-Meier per group: list of [time, survival] steps */
+    var km=byGroup.map(function(list){
+      var rec=list.slice().sort(function(a,b){return a.t-b.t}), atRisk=rec.length, sv=1, steps=[[0,1]];
+      rec.forEach(function(q){ if(q.e){ sv*=(1-1/atRisk); steps.push([q.t,sv]); } atRisk--; });
+      return steps;
+    });
+    function survAt(k,u){var s=1, st=km[k]; for(var j=0;j<st.length;j++){ if(st[j][0]<=u) s=st[j][1]; else break } return s}
+
+    var defs=el('defs',{});
+    G.forEach(function(g,k){
+      var lg=el('linearGradient',{id:'ln'+k,gradientUnits:'userSpaceOnUse',x1:f1(w*0.16),y1:0,x2:f1(w*0.50),y2:0});
+      var a=el('stop',{offset:0}); a.style.stopColor='var(--thread)';
+      var b=el('stop',{offset:1}); b.style.stopColor='var('+g.colour+')';
+      lg.appendChild(a); lg.appendChild(b); defs.appendChild(lg);
+      var bg=el('linearGradient',{id:'bd'+k,gradientUnits:'userSpaceOnUse',x1:f1(w*0.22),y1:0,x2:f1(w),y2:0});
+      [[0,0],[0.3,0.20],[1,0.10]].forEach(function(s){var st=el('stop',{offset:s[0]}); st.style.stopColor='var('+g.colour+')'; st.style.stopOpacity=s[1]; bg.appendChild(st)});
+      defs.appendChild(bg);
+      var eg=el('linearGradient',{id:'ed'+k,gradientUnits:'userSpaceOnUse',x1:f1(w*0.24),y1:0,x2:f1(w),y2:0});
+      [[0,0],[0.25,0.9],[1,0.7]].forEach(function(s){var st=el('stop',{offset:s[0]}); st.style.stopColor='var('+g.colour+')'; st.style.stopOpacity=s[1]; eg.appendChild(st)});
+      defs.appendChild(eg);
+    });
+    var fl=el('filter',{id:'soft',x:'-5%',y:'-30%',width:'110%',height:'160%'}); fl.appendChild(el('feGaussianBlur',{stdDeviation:wide?5:3})); defs.appendChild(fl);
+    svg.appendChild(defs);
+
+    var gBands=el('g',{'class':'bands'}), gGlow=el('g',{'class':'glow',filter:'url(#soft)'}), gLines=el('g',{}), gMarks=el('g',{});
+
+    /* ---- survival bands: half-height = band x S(t), stepping down at each event ---- */
+    G.forEach(function(g,k){
+      if(!byGroup[k].length) return;
+      var xs=[], x0=w*0.20, step=Math.max(6,w/140);
+      for(var x=x0;x<w+10;x+=step) xs.push(x);
+      km[k].forEach(function(s){ if(s[0]>0){ var ex=s[0]*w; if(ex>x0){ xs.push(ex-0.01); xs.push(ex+0.01); } } });
+      xs.sort(function(a,b){return a-b});
+      var up='', lo=[], edge='';
+      xs.forEach(function(x,j){
+        var u=x/w, hh=band*(0.07+0.93*survAt(k,u))*smooth((u-0.20)/0.22), yc=centre(k,u);
+        up+=(j?'L':'M')+f1(x)+' '+f1(yc-hh); lo.push('L'+f1(x)+' '+f1(yc+hh));
+      });
+      var p=el('path',{d:up+lo.reverse().join('')+'Z',fill:'url(#bd'+k+')','class':'band'}); gBands.appendChild(p);
+      var e1=el('path',{d:up,fill:'none',stroke:'url(#ed'+k+')','stroke-width':1.1,'stroke-linejoin':'round','class':'band edge'}); gBands.appendChild(e1);
+    });
+
+    /* ---- records ---- */
+    recs.forEach(function(q){
+      var g=G[q.k], k=q.k;
+      function yAt(x){
+        var u=x/w, t=smooth((u-q.s)/q.b), tc=smooth((u-sBar)/bBar);
+        var trunk=Y(C.origin)+wave(u,tc)+q.d*trunkSpread;
+        var stream=centre(k,u)+q.d*streamSpread;
+        return trunk+(stream-trunk)*t+Math.sin(u*6.283*q.fq+q.p)*q.a;
+      }
+      var xStop=q.done?w+14:q.t*w, step=Math.max(7,w/120), pts=[], x;
+      for(x=-14;x<xStop;x+=step) pts.push([x,yAt(x)]);
+      pts.push([xStop,yAt(xStop)]);
+      var d='M'+f1(pts[0][0])+' '+f1(pts[0][1]);
+      for(var j=1;j<pts.length-1;j++) d+='Q'+f1(pts[j][0])+' '+f1(pts[j][1])+' '+f1((pts[j][0]+pts[j+1][0])/2)+' '+f1((pts[j][1]+pts[j+1][1])/2);
+      d+='L'+f1(xStop)+' '+f1(yAt(xStop));
+      var path=el('path',{d:d,'class':'tr',stroke:'url(#ln'+k+')','stroke-width':q.sw.toFixed(2),pathLength:1});
+      path.style.opacity=q.op.toFixed(2); path.style.animationDelay=q.delay.toFixed(2)+'s';
+      gLines.appendChild(path);
+      if(R()<0.42){ var gl=el('path',{d:d,fill:'none',stroke:'url(#ln'+k+')','stroke-width':2.4}); gl.style.opacity=0.28; gGlow.appendChild(gl); }
+      var visits=2+Math.floor(R()*5), lim=Math.min(xStop,w)-12;
+      for(var v=0;v<visits && lim>30;v++){
+        var vx=10+Math.pow(R(),0.8)*(lim-10);
+        var c=el('circle',{cx:f1(vx),cy:f1(yAt(vx)),r:(1.2+R()*1.0).toFixed(2),fill:'url(#ln'+k+')','class':'mark'});
+        c.style.animationDelay=(q.delay+DUR*(vx+14)/(xStop+14)).toFixed(2)+'s'; gMarks.appendChild(c);
+      }
+      if(!q.done){
+        var ex=xStop, ey=yAt(xStop), m, dl=(q.delay+DUR).toFixed(2)+'s';
+        if(q.e){
+          var halo=el('circle',{cx:f1(ex),cy:f1(ey),r:8,'class':'mark'}); halo.style.fill='var('+g.colour+')'; halo.style.fillOpacity=.16; halo.style.animationDelay=dl; gMarks.appendChild(halo);
+          m=el('circle',{cx:f1(ex),cy:f1(ey),r:3.2,'class':'mark'}); m.style.fill='var('+g.colour+')';
+        }else{
+          m=el('circle',{cx:f1(ex),cy:f1(ey),r:3.2,'class':'mark',fill:'none','stroke-width':1.3}); m.style.stroke='var('+g.colour+')';
+        }
+        m.style.animationDelay=dl; gMarks.appendChild(m);
+      }
+    });
+    svg.appendChild(gBands); svg.appendChild(gGlow); svg.appendChild(gLines); svg.appendChild(gMarks);
+    return true;
+  }
+
+  function draw(animate){
+    if(!drawArt(svg,cohortKey,seed,!!animate && !reduce)) return;   /* About is not on screen */
+    drawnOnce=true;
+    var C=COHORTS[cohortKey];
+    while(legendEl.firstChild) legendEl.removeChild(legendEl.firstChild);
+    C.groups.forEach(function(g,i){
+      var li=document.createElement('li'); li.style.setProperty('--c','var('+g.colour+')');
+      li.textContent=g.name || (i===C.groups.length-1 ? C.legendLabel : '');
+      if(!g.name && i<C.groups.length-1) li.style.marginRight='-.6rem';
+      legendEl.appendChild(li);
+    });
+    capEl.textContent='Synthetic data, redrawn on every visit. '+C.note+' Each line is a patient record and each dot a visit; a record ends in a filled dot (event) or a ring (censored). The band under each group narrows step by step as events occur, tracing that group\u2019s survival curve.';
+  }
+
+  var cohortBtns=[].slice.call(document.querySelectorAll('[data-cohort]'));
+  cohortBtns.forEach(function(b){b.addEventListener('click',function(){
+    cohortKey=b.getAttribute('data-cohort');
+    cohortBtns.forEach(function(o){o.setAttribute('aria-pressed',o===b)});
+    seed=(Math.random()*1e9)|0; draw(true);
+  })});
+  document.getElementById('redraw').addEventListener('click',function(){seed=(Math.random()*1e9)|0; draw(true)});
+  var lastW=0, timer;
+  window.addEventListener('resize',function(){
+    clearTimeout(timer);
+    timer=setTimeout(function(){
+      var wNow=svg.getBoundingClientRect().width;
+      if(wNow>10 && Math.abs(wNow-lastW)>2){lastW=wNow; draw(false)}
+    },150);
+  });
+
+  /* first view; wait briefly for the web fonts so labels are measured correctly */
+  show(fromHash(),false);
+  void document.body.offsetWidth;
+  function go(){ if(ready) return; ready=true; if(current==='about') draw(true) }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(go); setTimeout(go,1500) } else go();
+})();
+</script>
+</body>
+</html>
